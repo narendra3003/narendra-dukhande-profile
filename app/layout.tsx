@@ -37,6 +37,7 @@ export default function RootLayout({
           property="og:description"
           content="Explore Narendra Dukhande's professional profile, featuring expertise in DSA, Full-Stack Development, AI, and Data Science."
         />
+        <meta name="google-site-verification" content="KVwBOvHicUEedydurE_yQjOfWdKx_dka9bqxXuTaJO8" />
         <meta property="og:image" content="/profile-photo.png" />
         <meta property="og:url" content="https://narendra-dukhande-profile.vercel.app" />
         <meta property="og:type" content="website" />
