@@ -7,10 +7,10 @@ import type { Metadata } from "next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Narendra Dukhande - DSA Expert & Full-Stack Developer",
+  title: "Narendra Dukhande | DSA Expert & Full-Stack Developer",
   description:
-    "Narendra Dukhande's professional profile – DSA Expert, Full-Stack Developer, AI & Data Science enthusiast. Explore projects, achievements, and skills.",
-    generator: 'v0.dev'
+    "Explore Narendra Dukhande’s portfolio - expert in DSA, full-stack web development, AI, and data science. View projects, achievements & skills.",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
         />
         <meta name="author" content="Narendra Dukhande" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://narendra3003.github.io/profile/" />
+        <link rel="canonical" href="https://narendra-dukhande-profile.vercel.app" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Narendra Dukhande - DSA Expert & Full-Stack Developer" />
@@ -37,25 +37,55 @@ export default function RootLayout({
           property="og:description"
           content="Explore Narendra Dukhande's professional profile, featuring expertise in DSA, Full-Stack Development, AI, and Data Science."
         />
-        <meta property="og:image" content="https://narendra3003.github.io/profile/profile-photo.jpg" />
-        <meta property="og:url" content="https://narendra3003.github.io/profile/" />
+        <meta property="og:image" content="/profile-photo.png" />
+        <meta property="og:url" content="https://narendra-dukhande-profile.vercel.app" />
         <meta property="og:type" content="website" />
 
-        {/* Schema Markup for SEO */}
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Narendra Dukhande",
-            "url": "https://narendra3003.github.io/profile/",
-            "jobTitle": "DSA Expert & Full-Stack Developer",
-            "description": "Narendra Dukhande is a passionate software engineer specializing in DSA, full-stack development, AI, and data science.",
-            "sameAs": [
-              "https://linkedin.com/in/narendra-dukhande",
-              "https://github.com/narendra3003"
-            ]
-          }
-        `}</script>
+{/* Combined Schema Markup for Person + Website + Profile */}
+<script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://narendra-dukhande-profile.vercel.app#me",
+      "name": "Narendra Dukhande",
+      "url": "https://narendra-dukhande-profile.vercel.app",
+      "jobTitle": "DSA Expert & Full-Stack Developer",
+      "image": "https://narendra-dukhande-profile.vercel.app/profile-photo.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/narendra-dukhande",
+        "https://github.com/narendra3003"
+      ],
+      "knowsAbout": [
+        "Data Structures and Algorithms",
+        "Full-Stack Development",
+        "AI and Machine Learning",
+        "Data Science",
+        "Competitive Programming"
+      ],
+      "description": "Narendra Dukhande is a DSA expert, full-stack developer, and AI & Data Science enthusiast with a strong portfolio of technical projects."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://narendra-dukhande-profile.vercel.app#website",
+      "url": "https://narendra-dukhande-profile.vercel.app",
+      "name": "Narendra Dukhande Portfolio",
+      "publisher": {
+        "@id": "https://narendra-dukhande-profile.vercel.app#me"
+      },
+      "description": "Official portfolio of Narendra Dukhande, showcasing expertise in DSA, full-stack web development, artificial intelligence, and data science.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://narendra-dukhande-profile.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+`}</script>
+
+
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>

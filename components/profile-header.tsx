@@ -28,12 +28,7 @@ export function ProfileHeader() {
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-3xl font-bold tracking-tight mb-2">Narendra Dukhande</h1>
               <p className="text-muted-foreground mb-4">DSA Expert & Full-Stack Developer</p>
-
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
-                <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">8356840696</span>
-                </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-muted-foreground" />
                   <a href="mailto:narendradukhande@gmail.com" className="text-sm hover:text-primary transition-colors">
