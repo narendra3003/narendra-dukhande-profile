@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/section-heading"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Database, Layout, Wrench } from "lucide-react"
+import { Code, Database, ExternalLink, Layout, Wrench } from "lucide-react"
 
 export function SkillsSection() {
   const skills = {
@@ -15,7 +15,10 @@ export function SkillsSection() {
     { name: "LeetCode", url: "https://leetcode.com/u/Narendra_3003/" },
     { name: "Codeforces", url: "https://codeforces.com/profile/Narendra_3003/" },
     { name: "GeeksforGeeks", url: "https://www.geeksforgeeks.org/user/narendra_3003/" },
-    { name: "Naukri360", url: "https://www.naukri.com/code360/profile/6af8d9f2-9c02-4ea6-8b3a-c19ee3982659" },
+    // { name: "Naukri360", url: "https://www.naukri.com/code360/profile/6af8d9f2-9c02-4ea6-8b3a-c19ee3982659" },
+    { name: "CodeChef", url: "https://www.codechef.com/users/narendra3003" },
+    { name: "InteriewBit", url: "https://www.interviewbit.com/profile/narendra-3003/" },
+    { name: "Hackrank", url: "https://www.hackerrank.com/profile/Narendra_3003" },
   ]
 
   return (
@@ -88,24 +91,39 @@ export function SkillsSection() {
       </div>
 
       <Card className="mt-6 border border-border/40 shadow-sm">
-        <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4">Coding Profiles</h3>
-          <div className="flex flex-wrap gap-3">
-            {codingProfiles.map((profile) => (
-              <a
-                key={profile.name}
-                href={profile.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 rounded-md transition-colors"
-              >
-                <Code className="h-4 w-4" />
-                <span>{profile.name}</span>
-              </a>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+  <CardContent className="p-6">
+    {/* Heading and Codolio Button in Same Row */}
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+      <h3 className="text-lg font-semibold">Coding Profiles</h3>
+      <a
+        href="https://codolio.com/profile/narendra3003/card"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-3 py-1.5 border border-primary text-primary rounded-md hover:bg-primary/10 text-sm transition"
+      >
+        <ExternalLink className="h-4 w-4" />
+        <span>Coding Card</span>
+      </a>
+    </div>
+
+    {/* Profile Links */}
+    <div className="flex flex-wrap gap-3">
+      {codingProfiles.map((profile) => (
+        <a
+          key={profile.name}
+          href={profile.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 rounded-md transition-colors"
+        >
+          <Code className="h-4 w-4" />
+          <span>{profile.name}</span>
+        </a>
+      ))}
+    </div>
+  </CardContent>
+</Card>
+
     </section>
   )
 }

@@ -9,7 +9,7 @@ export function EducationSection() {
       degree: "Bachelor of Engineering (Information Technology)",
       duration: "July 2022 - Present",
       location: "Kurla, Maharashtra",
-      grade: "8.67 (Till Sem-4)",
+      grade: "8.56 (Till Sem-5)",
     },
     {
       institution: "Ramniranjan Jhunjhunwala College",
