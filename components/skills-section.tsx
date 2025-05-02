@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/section-heading"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Database, ExternalLink, Layout, Wrench } from "lucide-react"
+import { Code, Database, ExternalLink, Layout, Wrench, SquareCode} from "lucide-react"
 
 export function SkillsSection() {
   const skills = {
@@ -92,19 +92,25 @@ export function SkillsSection() {
 
       <Card className="mt-6 border border-border/40 shadow-sm">
   <CardContent className="p-6">
-    {/* Heading and Codolio Button in Same Row */}
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-      <h3 className="text-lg font-semibold">Coding Profiles</h3>
-      <a
-        href="https://codolio.com/profile/narendra3003/card"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-3 py-1.5 border border-primary text-primary rounded-md hover:bg-primary/10 text-sm transition"
-      >
-        <ExternalLink className="h-4 w-4" />
-        <span>Coding Card</span>
-      </a>
-    </div>
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+  {/* Left side: Icon + Heading */}
+  <div className="flex items-center gap-2">
+    <SquareCode className="h-5 w-5 text-primary" />
+    <h3 className="text-lg font-semibold">Coding Profiles</h3>
+  </div>
+
+  {/* Right side: Coding Card Button */}
+  <a
+    href="https://codolio.com/profile/narendra3003/card"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 px-3 py-1.5 border border-primary text-primary rounded-md hover:bg-primary/10 text-sm transition"
+  >
+    <ExternalLink className="h-4 w-4" />
+    <span>Coding Card</span>
+  </a>
+</div>
+
 
     {/* Profile Links */}
     <div className="flex flex-wrap gap-3">
