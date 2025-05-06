@@ -8,7 +8,7 @@ export function ProjectsSection() {
   const projects = [
     {
       title: "ExpenseEase - An Expense Tracking Desktop Application",
-      techStack: ["CSS", "SceneBuilder", "JavaFX", "Java", "MySQL"],
+      techStack: ["JavaFX", "SceneBuilder", "CSS", "JAVA", "MySQL"],
       duration: "Sept 2023 - Dec 2023",
       description:
         "Developed a user-friendly desktop app for efficient personal expense management. Users can create custom categories, set budgets, and track finances. Features include managing borrowed/lent money and tracking over 90% of daily expenses.",
@@ -31,6 +31,15 @@ export function ProjectsSection() {
       description:
         "Analyzed agricultural trends based on climatic data to predict yields for the upcoming years using machine learning. The analysis improved agricultural planning by providing insights based on climatic data trends.",
       emoji: "🌱",
+    },
+    {
+      title: "StudyXP: Gamified Self-Study Tracker Web App",
+      techStack: ["Flask", "Python", "MySQL", "HTML", "CSS", "Chart.js"],
+      duration: "22 April 2024 -One Day Hackathon",
+      description:
+        "Built a Flask-based web app to log daily subject-wise study hours and track mock tests. Integrated XP rewards (10–30 XP/day), consistency streaks, and progress analytics with smart reminders. Boosted user engagement by 40% through gamification and AI-based insights.",
+      github: "https://github.com/narendra3003/StudyXP", // replace if different
+      emoji: "📖",
     },
   ]
 
