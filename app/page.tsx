@@ -9,7 +9,8 @@ import { ExtracurricularsSection } from "@/components/extracurriculars-section"
 import { AdditionalSection } from "@/components/additional-section"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
-
+// Ensure the import statement for VisitorCounter is correct
+// No additional code is needed at the $PLACEHOLDER$ location
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -25,7 +26,6 @@ export default function Home() {
         <ExtracurricularsSection />
         <AdditionalSection />
       </main>
-
       <Footer />
       <ScrollToTop />
     </div>
